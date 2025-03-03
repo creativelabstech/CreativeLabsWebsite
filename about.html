@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<meta name="keywords" content="Creative Labs, USC, About">
+
+	<meta name="description" content="Creative Lbas USC About Page">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>About</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0px;
+			padding-top: 50px;
+			background-color: rgb(10, 85, 10);
+			color: white;
+		}
+
+		#hangouts, #team, #container, #mission {
+			width: 1000px;
+			margin: auto;
+		}
+
+		#nav, #container {
+			display: flex;
+		}
+
+		#left {
+			width: 460px;
+			padding-left: 14px;
+			padding-right: 15px;
+		}
+
+		#right {
+			width: 460px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		#thumbnails {
+			display: flex;
+			flex-wrap: wrap; /* Allows items to wrap to the next row */
+			justify-content: center; /* Centers thumbnails horizontally */
+			gap: 20px; /* Adds space between thumbnails */
+		}
+
+		.thumbnail {
+			width: calc(33.33% - 20px); /* Ensures three thumbnails per row with spacing */
+			max-width: 300px; /* Optional: Set a maximum width */
+			box-sizing: border-box; /* Includes padding/border in width calculation */
+		}
+
+		.thumbnail img {
+			width: 100%; /* Ensures image fits inside thumbnail */
+			height: auto; /* Maintains aspect ratio */
+		}
+
+		#nav ul {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			display: flex;
+			text-align: right;
+			margin-right: 20px;
+		}
+
+		#nav li {
+			width: 140px;
+			line-height: 50px;
+			text-align: center;
+		}
+
+		#nav li:hover > a {
+			color: black;
+			transition: color 0.3s ease-in-out;
+		}
+
+		#nav a {
+			display: block;
+			color: white;
+			text-decoration: none;
+		}
+
+		#navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: rgb(10, 85, 10);
+			height: 100px;
+			width: 100%;
+			padding: 10px 20px;
+
+		}
+
+
+	#logo {
+    	margin-left: 20px;
+	}
+
+	#logo > a {
+		display: inline-block; /* Ensures the link behaves like a block for hover effect */
+	}
+
+	#logo > a > img {
+		width: 70px;
+		height: auto;
+		transition: filter 0.3s ease-in-out; /* Smooth transition for darkening */
+	}
+
+	#logo > a > img:hover {
+		filter: brightness(70%); /* Darkens the image */
+		cursor: pointer; /* Changes cursor to indicate a clickable button */
+	}
+
+
+		#container, #mission, #hangouts, #team {
+			padding: 70px;
+		}
+
+		#team {
+			text-align: center;
+		}
+
+		#footer {
+			background-color: #777;
+			color: #FFF;
+			text-align: center;
+			height: 50px;
+			line-height: 50px;
+			font-size: 0.8em;
+		}
+
+		.img-container {
+			background-color: #999;
+			width: 180px;
+			height: 180px;
+			margin: 10px;
+			overflow: hidden;
+
+			position: relative;
+		}
+
+		.img-container > img {
+			width: auto;
+			height: 100%;
+		}
+
+		.img-container > .width-100 {
+			width: 100%;
+			height: auto;
+		}
+
+		.overlay {
+			color: #FFF;
+			background-color: rgba(0, 0, 0, 0.6);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			padding-top: 80px;
+			visibility: hidden;
+			opacity: 0; /* Start with opacity 0 */
+			transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Smooth animation */
+		}
+
+		.img-container:hover .overlay {
+			visibility: visible;
+			opacity: 1; /* Fade in effect */
+		}
+
+
+		/* Tablets - Screen sizes <= 991px */
+		/* @media (max-width: 991px) {
+			#nav, #container, #left, #right {
+				width: auto; 
+				border: none;
+			}
+			#container {
+				flex-direction: column;
+			}
+			.thumbnail {
+				width: 23%;
+				margin: 1%;
+			}
+		} */
+
+		/* Mobile - Screen sizes <= 767 */
+		/* @media (max-width: 767px) {
+			body {
+				background-color: yellow;
+				padding: 0px;
+			}
+			#navbar {
+				position: static;
+			}
+			#nav ul {
+				flex-direction: column;
+			}
+			#nav li {
+				width: auto;
+			}
+			#thumbnails {
+				flex-direction: column;
+			}
+			.thumbnail {
+				width: 50%;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.thumbnail img {
+				width: 100%;
+				height: auto;
+			}
+		} */
+	</style>
+
+</head>
+
+<body>
+
+	<div id="navbar">
+		<div id="logo">
+			<a href="/home">
+				<img src="img_website/logo_circle_white.png" alt="Logo">
+			</a>
+		</div>
+		
+
+		<div id="nav">
+			<ul>
+				<li><a href="">About</a></li>
+				<li><a href="">Membership</a></li>
+				<li><a href="">Projects</a></li>
+			</ul>
+
+		</div> <!-- #nav -->
+
+	</div> <!-- #navbar -->
+
+	<div id="container">
+
+		<div id="left">
+
+			<h2>Who are we?</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet urna at molestie tempor. Aenean
+				sapien quam, molestie ac eros at, venenatis interdum diam. Proin tempor sollicitudin est. Phasellus
+				varius, felis vel rutrum sodales, felis purus rutrum justo, et vehicula sem justo ac erat. Ut sem orci,
+				aliquam ut nulla vel, congue rutrum nibh. Cras pellentesque interdum orci ut auctor. Cras interdum velit
+				at velit lobortis auctor.</p>
+
+		</div> <!-- #left -->
+
+		<div id="right">
+			<h2>What do we do?</h2>
+
+			<p>Morbi a metus urna. Proin gravida sem vitae turpis porta, sed pellentesque nisi faucibus. Integer
+				placerat dictum sodales. Morbi rhoncus dictum orci, vel dictum nisl luctus vel. Donec fringilla
+				imperdiet eros, sit amet tempus velit interdum at. Class aptent taciti sociosqu ad litora torquent per
+				conubia nostra, per inceptos himenaeos. Aliquam vehicula varius tincidunt.</p>
+		</div> <!-- #right -->
+
+	</div> <!-- #container -->
+
+	<div id="mission">
+		<h2>Our Mission</h2>
+
+		<p>Creative Labs SC's mission is to cultivate information and passion in the form of modern art and technology within an expansive creator ecosystem.</p>
+	</div>
+
+	<div id="hangouts">
+		<h2>Community</h2>
+
+		<p>Mauris tempor nec odio eu laoreet. Quisque eu dui eros. Maecenas convallis cursus urna, non iaculis augue
+			finibus et. Nam auctor aliquet augue non egestas. Quisque nec mi dictum, convallis odio eget, imperdiet
+			lectus. Aenean vitae diam nec erat iaculis tincidunt. Aliquam vestibulum hendrerit leo, sit amet
+			scelerisque turpis ultrices eu. Nam eu nunc sit amet ipsum faucibus malesuada quis eu arcu. Cras et
+			laoreet risus, quis placerat nulla. Curabitur lobortis lectus in orci mattis ullamcorper. Vestibulum
+			ultricies sodales mollis.</p>
+
+	</div>
+
+	<div id="team">
+		<h2>Our Team</h2>
+
+		<p>Meet the Fall 2024 Executive Board.</p>
+
+		<div id="thumbnails">
+
+			<div class="img-container">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Ollie">
+				<div class="overlay">Ollie - President</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Bob">
+				<div class="overlay">Bob - Vice President</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+				<div class="overlay">Kevin - Finance</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+				<div class="overlay">Kevin - Finance</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+				<div class="overlay">Kevin - Finance</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+				<div class="overlay">Kevin - Finance</div>
+			</div> <!-- .img-container -->
+
+		</div>
+
+	</div>
+
+	<div id="footer">
+		Creative Labs USC &copy; 2024
+	</div> <!-- #footer -->
+
+</body>
+
+</html>
