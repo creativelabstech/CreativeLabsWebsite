@@ -1,22 +1,28 @@
-// Wait for the DOM to fully load
 document.addEventListener("DOMContentLoaded", function () {
-    // Select all accordion buttons
-    const accordionButtons = document.querySelectorAll(".accordion-button");
 
-    // Add event listeners to each button
-    accordionButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            // Toggle the "active" class on the button
-            button.classList.toggle("active");
+    // get plus buttons
+    const plusIcons = document.querySelectorAll(".plus");
 
-            // Find the associated accordion content
-            const content = button.nextElementSibling;
+    // get each button
+    plusIcons.forEach((plus) => {
 
-            // Toggle the visibility of the content
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null; // Collapse the content
+        // make only plus clickable
+        plus.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            // get content
+            const button = plus.closest(".accordion-button");
+            const content = button.querySelector(".accordion-content");
+
+            // if button already activated, close it, else open
+            const isActive = button.classList.contains("active");
+
+            if (isActive) {
+                button.classList.remove("active");
+                content.style.maxHeight = 0;
             } else {
-                content.style.maxHeight = content.scrollHeight + "px"; // Expand the content
+                button.classList.add("active");
+                content.style.maxHeight = content.scrollHeight + "px";
             }
         });
     });
