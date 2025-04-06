@@ -13,11 +13,27 @@
 	<title>About</title>
 	<style>
 		body {
-			font-family: Arial, sans-serif;
+			font-family: 'Space Grotesk', sans-serif;
 			margin: 0px;
-			padding-top: 50px;
-			background-color: rgb(10, 85, 10);
-			color: white;
+			padding-top: 100px;
+			background-color: #1c4c2f;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			color: #f5f5f5;
+		}
+		h1, h2 {
+			color: #f8bedd;
+			font-size: 40px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: 20px;
+			text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.6;
 		}
 
 		#hangouts, #team, #container, #mission {
@@ -41,23 +57,30 @@
 			padding-right: 15px;
 		}
 
+		#middle {
+			text-align: center;
+			width: 100%;
+			margin: auto;
+		}
+
 		#thumbnails {
 			display: flex;
-			flex-wrap: wrap; /* Allows items to wrap to the next row */
-			justify-content: center; /* Centers thumbnails horizontally */
-			gap: 20px; /* Adds space between thumbnails */
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
 		}
 
 		.thumbnail {
-			width: calc(33.33% - 20px); /* Ensures three thumbnails per row with spacing */
-			max-width: 300px; /* Optional: Set a maximum width */
-			box-sizing: border-box; /* Includes padding/border in width calculation */
+			width: calc(33.33% - 20px);
+			max-width: 300px;
+			box-sizing: border-box;
 		}
 
 		.thumbnail img {
-			width: 100%; /* Ensures image fits inside thumbnail */
-			height: auto; /* Maintains aspect ratio */
+			width: 100%;
+			height: auto;
 		}
+
 
 		#nav ul {
 			list-style: none;
@@ -102,24 +125,24 @@
 		}
 
 
-	#logo {
-    	margin-left: 20px;
-	}
+		#logo {
+			margin-left: 20px;
+		}
 
-	#logo > a {
-		display: inline-block; /* Ensures the link behaves like a block for hover effect */
-	}
+		#logo > a {
+			display: inline-block;
+		}
 
-	#logo > a > img {
-		width: 70px;
-		height: auto;
-		transition: filter 0.3s ease-in-out; /* Smooth transition for darkening */
-	}
+		#logo > a > img {
+			width: 70px;
+			height: auto;
+			transition: filter 0.3s ease-in-out;
+		}
 
-	#logo > a > img:hover {
-		filter: brightness(70%); /* Darkens the image */
-		cursor: pointer; /* Changes cursor to indicate a clickable button */
-	}
+		#logo > a > img:hover {
+			filter: brightness(70%);
+			cursor: pointer;
+		}
 
 
 		#container, #mission, #hangouts, #team {
@@ -170,20 +193,20 @@
 			text-align: center;
 			padding-top: 80px;
 			visibility: hidden;
-			opacity: 0; /* Start with opacity 0 */
-			transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Smooth animation */
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 		}
 
 		.img-container:hover .overlay {
 			visibility: visible;
-			opacity: 1; /* Fade in effect */
+			opacity: 1;
 		}
 
 
 		/* Tablets - Screen sizes <= 991px */
 		/* @media (max-width: 991px) {
 			#nav, #container, #left, #right {
-				width: auto; 
+				width: auto;
 				border: none;
 			}
 			#container {
@@ -230,112 +253,156 @@
 
 <body>
 
-	<div id="navbar">
-		<div id="logo">
-			<a href="/home">
-				<img src="img_website/logo_circle_white.png" alt="Logo">
-			</a>
-		</div>
-		
+<div id="navbar">
+	<div id="logo">
+		<a href="/home">
+			<img src="img_website/logo_circle_white.png" alt="Logo">
+		</a>
+	</div>
 
-		<div id="nav">
-			<ul>
-				<li><a href="">About</a></li>
-				<li><a href="">Membership</a></li>
-				<li><a href="">Projects</a></li>
-			</ul>
 
-		</div> <!-- #nav -->
+	<div id="nav">
+		<ul>
+			<li><a href="">About</a></li>
+			<li><a href="">Membership</a></li>
+			<li><a href="">Projects</a></li>
+		</ul>
 
-	</div> <!-- #navbar -->
+	</div> <!-- #nav -->
 
-	<div id="container">
+</div> <!-- #navbar -->
 
-		<div id="left">
+<div id="container">
+	<div id="middle">
+		<h1>Who We Are</h1>
+	</div> <!-- #middle -->
+</div>
 
-			<h2>Who are we?</h2>
+<div id="container">
+	<div id="left">
+		<h2>Our Story</h2>
+		<p>Creative Labs SC is the second branch of the CL community, following along Creative Labs UCLA, who are the original creators. Specifically within USC, we found gaps and limitations in the creative community: there weren't a lot of opportunities for student-creatives to explore and express their creativity, both physical and technical.</p>
+		<p>We hope our organization serves as an escape from harsh deadlines and restrictions that come with academia and extracurriculars to see what creativity lies in you. Whether you're a seasoned artist or burgeoning creative, we invite you to explore your unique creative voice and vision.</p>
+	</div>
+	<div id="right">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Otter" style="width:100%; max-width:300px; display:block; margin:auto;">
+	</div>
+</div>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet urna at molestie tempor. Aenean
-				sapien quam, molestie ac eros at, venenatis interdum diam. Proin tempor sollicitudin est. Phasellus
-				varius, felis vel rutrum sodales, felis purus rutrum justo, et vehicula sem justo ac erat. Ut sem orci,
-				aliquam ut nulla vel, congue rutrum nibh. Cras pellentesque interdum orci ut auctor. Cras interdum velit
-				at velit lobortis auctor.</p>
-
-		</div> <!-- #left -->
-
-		<div id="right">
-			<h2>What do we do?</h2>
-
-			<p>Morbi a metus urna. Proin gravida sem vitae turpis porta, sed pellentesque nisi faucibus. Integer
-				placerat dictum sodales. Morbi rhoncus dictum orci, vel dictum nisl luctus vel. Donec fringilla
-				imperdiet eros, sit amet tempus velit interdum at. Class aptent taciti sociosqu ad litora torquent per
-				conubia nostra, per inceptos himenaeos. Aliquam vehicula varius tincidunt.</p>
-		</div> <!-- #right -->
-
-	</div> <!-- #container -->
-
-	<div id="mission">
+<div id="container">
+	<div id="left">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Otter" style="width:100%; max-width:300px; display:block; margin:auto;">
+	</div>
+	<div id="right">
 		<h2>Our Mission</h2>
-
 		<p>Creative Labs SC's mission is to cultivate information and passion in the form of modern art and technology within an expansive creator ecosystem.</p>
 	</div>
+</div>
 
-	<div id="hangouts">
-		<h2>Community</h2>
+<div id="container">
+	<div id="left">
+		<h2>Our Initiatives</h2>
+		<p>Creative Labs SC is a community of student creatives working on cool projects. We are a community of passionate creatives using modern art and technology to produce meaningful work. We welcome students from all disciplines and backgrounds to work together on technical and creative projects.</p>
+		<p>At the start of each semester, members collaborate and bounce ideas off of each other, choosing or proposing projects to pursue throughout the term. These projects are pursued throughout the semester, culminating in a final exhibition where members showcase what they have created.</p>
+		<p>Beyond projects, CL hosts a plethora of events throughout the semester to foster a stronger community among members, ranging from creative workshops to retreats.</p>
 
-		<p>Mauris tempor nec odio eu laoreet. Quisque eu dui eros. Maecenas convallis cursus urna, non iaculis augue
-			finibus et. Nam auctor aliquet augue non egestas. Quisque nec mi dictum, convallis odio eget, imperdiet
-			lectus. Aenean vitae diam nec erat iaculis tincidunt. Aliquam vestibulum hendrerit leo, sit amet
-			scelerisque turpis ultrices eu. Nam eu nunc sit amet ipsum faucibus malesuada quis eu arcu. Cras et
-			laoreet risus, quis placerat nulla. Curabitur lobortis lectus in orci mattis ullamcorper. Vestibulum
-			ultricies sodales mollis.</p>
+	</div>
+	<div id="right">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Otter" style="width:100%; max-width:300px; display:block; margin:auto;">
+	</div>
+</div>
+
+
+
+<div id="team">
+	<h2>Our Team</h2>
+
+	<p>Meet the Fall 2024 Executive Board.</p>
+
+	<div id="thumbnails">
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Ollie">
+			<div class="overlay">Olivia Dien Co-President</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Bob">
+			<div class="overlay">Kathy Lin - Co- President</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Esther Kim - Vice President</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Jordan Tran - Droject Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">SooYoung Kim - Recruitment Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Kelani Fong - Technology Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Mandie Le - Finance Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Tammi Sison - Creative Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Samuel Wu - Co-Internal Events Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Avery Liu - Co-Internal Events Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Jenny Kim - Co-External Events Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Livia Tseng - Co-External Events Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Kelani Fong - Technology Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Evan Lu - Marketing/Communications Director</div>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
+			<div class="overlay">Ameen Qureshi - Senior Advisor</div>
+		</div> <!-- .img-container -->
 
 	</div>
 
-	<div id="team">
-		<h2>Our Team</h2>
+</div>
 
-		<p>Meet the Fall 2024 Executive Board.</p>
-
-		<div id="thumbnails">
-
-			<div class="img-container">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Ollie">
-				<div class="overlay">Ollie - President</div>
-			</div> <!-- .img-container -->
-
-			<div class="img-container">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Bob">
-				<div class="overlay">Bob - Vice President</div>
-			</div> <!-- .img-container -->
-
-			<div class="img-container">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
-				<div class="overlay">Kevin - Finance</div>
-			</div> <!-- .img-container -->
-
-			<div class="img-container">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
-				<div class="overlay">Kevin - Finance</div>
-			</div> <!-- .img-container -->
-
-			<div class="img-container">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
-				<div class="overlay">Kevin - Finance</div>
-			</div> <!-- .img-container -->
-
-			<div class="img-container">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Kevin">
-				<div class="overlay">Kevin - Finance</div>
-			</div> <!-- .img-container -->
-
-		</div>
-
-	</div>
-
-	<div id="footer">
-		Creative Labs USC &copy; 2024
-	</div> <!-- #footer -->
+<div id="footer">
+	Creative Labs USC &copy; 2024
+</div> <!-- #footer -->
 
 </body>
 
