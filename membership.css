@@ -1,7 +1,8 @@
 /* General */
 html, body {
-    font-family: Arial, sans-serif;
+    font-family: 'Space Grotesk';
     box-sizing: border-box;
+    background-color: #1c4c2f;
 }
 
 a {
@@ -29,7 +30,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 10px 100px;
-    background-color: #f9f9f9;
+    background-color: rgb(10, 85, 10);
     border-bottom: 2px solid #ccc;
     position: fixed;
     top: 0;
@@ -202,10 +203,16 @@ a:hover {
   }
 
 .purple {
-    background-color: #C3B1E1;
+    background-color: #D9D5C9;
 }
+
+
 
 .body1{
     padding-left: 60px;
     padding-right: 40px;
+}
+
+#faqtitle, #applytobecreative {
+    color: #f8bedd;
 }
