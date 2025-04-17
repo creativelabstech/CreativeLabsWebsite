@@ -1,0 +1,49 @@
+#navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(10, 85, 10);
+    height: 100px;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  
+  #logo {
+    margin-left: 20px;
+  }
+  #logo > a > img {
+    width: 70px;
+    height: auto;
+    transition: filter 0.3s ease-in-out;
+  }
+  #logo > a > img:hover {
+    filter: brightness(70%);
+    cursor: pointer;
+  }
+  
+  #nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: right;
+    margin-right: 20px;
+  }
+  #nav li {
+    width: 140px;
+    line-height: 50px;
+    text-align: center;
+  }
+  #nav li:hover > a {
+    color: black;
+    transition: color 0.3s ease-in-out;
+  }
+  #nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+  
