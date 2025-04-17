@@ -1,6 +1,6 @@
 /* General */
 html, body {
-    font-family: 'Space Grotesk';
+    font-family: 'Space Grotesk', sans-serif;
     box-sizing: border-box;
     background-color: #1c4c2f;
 }

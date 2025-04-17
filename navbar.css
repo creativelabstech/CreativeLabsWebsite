@@ -47,3 +47,22 @@
     text-decoration: none;
   }
   
+
+#logo > a {
+    display: inline-block;
+    padding: 0;
+    border-radius: 0;
+  }
+  
+  #nav a {
+    display: block;       
+    padding: 0;          
+    font-size: initial;   
+    font-weight: normal;   
+    border-radius: 0;
+  }
+  
+  #nav a:hover {
+    background-color: transparent;
+  }
+  
