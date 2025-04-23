@@ -6,7 +6,7 @@
 }
 
 html, body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'NewYorker', sans-serif;
     box-sizing: border-box;
     background-color: #1c4c2f;
 }
@@ -35,9 +35,9 @@ a {
     padding: 5px 5px;
 }
 
-a:hover {
+/* a:hover {
     background-color: #87CEEB;
-}
+} */
 
 /* Header */
 .header {
@@ -79,6 +79,7 @@ a:hover {
 
 /* Application Section */
 .apply {
+    font-family: 'LibreBaskervilleBold';
     display: flex;
     flex-direction: row;
     padding: 50px 200px;
@@ -105,6 +106,7 @@ a:hover {
 }
 
 .applyhere {
+    font-family: 'LibreBaskervilleBold';
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -114,13 +116,12 @@ a:hover {
     height: 30px;
 }
 
-.applyhere:hover {
+/* .applyhere:hover {
     background-color: #87CEEB;
-}
+} */
 
 .rightapply {
     flex: 1;
-    background-color: lightblue;
     height: 400px; /* Placeholder height */
     max-width: 500px;
     border-radius: 10px;
@@ -172,17 +173,21 @@ a:hover {
 }
 
 .accordion-header {
+    font-family: 'LibreBaskervilleBold', sans-serif;
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
 }
 
-.accordion-button:hover {
+/* .accordion-button:hover {
     background-color: #87CEEB;
-}
+} */
 
 .accordion-content {
+    font-family: "Libre Caslon Display";
+    font-weight: 400;
+    font-style: normal;
     width: 100%;
     max-height: 0;
     text-align: left;
@@ -221,13 +226,21 @@ a:hover {
     background-color: #D9D5C9;
 }
 
-
-
 .body1{
     padding-left: 60px;
     padding-right: 40px;
 }
 
 #faqtitle, #applytobecreative {
-    color: #f8bedd;
+    color: #F1AFAF;
+}
+
+@font-face {
+    font-family: 'NewYorker';
+    src: url('fonts/NewYorker-6Y46.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LibreBaskervilleBold';
+    src: url('fonts/LibreBaskervilleBold-A606.ttf') format('truetype');
 }
