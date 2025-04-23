@@ -1,15 +1,15 @@
 #navbar {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(10, 85, 10);
-    height: 100px;
-    width: 100%;
-    padding: 10px 20px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('assets/background.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100%;
+  padding: 10px 20px;
+}
   
   #logo {
     margin-left: 20px;

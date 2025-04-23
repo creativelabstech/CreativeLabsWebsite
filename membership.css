@@ -1,8 +1,23 @@
 /* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     font-family: 'Space Grotesk', sans-serif;
     box-sizing: border-box;
     background-color: #1c4c2f;
+}
+
+body {
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 a {
