@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<meta name="keywords" content="Creative Labs, USC, About">
+
+	<meta name="description" content="Creative Lbas USC About Page">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>About</title>
+	<style>
+		@font-face {
+			font-family: 'NewYorker';
+			src: url('fonts/NewYorker-6Y46.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'LibreBaskerville';
+			src: url('fonts/LibreBaskerville-DpdE.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'LibreBaskerville';
+			src: url('fonts/LibreBaskervilleBold-A606.ttf') format('truetype');
+			font-weight: bold;
+		}
+		@font-face {
+			font-family: 'LibreBaskerville';
+			src: url('fonts/LibreBaskervilleItalic-q8K6.ttf') format('truetype');
+			font-style: italic;
+		}
+
+		body {
+      font-family: 'LibreBaskerville', serif;
+      margin: 0px;
+      padding-top: 100px;
+      background-image: url('assets/background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #f5f5f5;
+    }
+    h1 {
+      font-family: 'NewYorker', serif;
+      color: #f8bedd;
+      font-size: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
+	h2 {
+      font-family: 'NewYorker', serif;
+      color: #f8bedd;
+      font-size: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+		#hangouts, #team, #container, #mission {
+			width: 1000px;
+			margin: auto;
+		}
+
+		#nav, #container {
+			display: flex;
+		}
+
+		#left {
+			width: 460px;
+			padding-left: 14px;
+			padding-right: 15px;
+		}
+
+		#right {
+			width: 460px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+    
+    #middle {
+      text-align: center;
+      width: 100%;
+      margin: auto;
+    }
+
+		#thumbnails {
+			display: flex;
+			flex-wrap: wrap; 
+			justify-content: center; 
+			gap: 20px; 
+		}
+
+		.thumbnail {
+			width: calc(33.33% - 20px); 
+			max-width: 300px; 
+			box-sizing: border-box; 
+		}
+
+		.thumbnail img {
+			width: 100%; 
+			height: auto; 
+		}
+
+
+		#nav ul {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			display: flex;
+			text-align: right;
+			margin-right: 20px;
+		}
+
+		#nav li {
+			width: 140px;
+			line-height: 50px;
+			text-align: center;
+		}
+
+		#nav li:hover > a {
+			color: black;
+			transition: color 0.3s ease-in-out;
+		}
+
+		#nav a {
+			display: block;
+			color: white;
+			text-decoration: none;
+		}
+
+		#navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			
+			background-size: cover;
+			background-position: center;
+			height: 100px;
+			width: 100%;
+			padding: 10px 20px;
+
+		}
+
+
+	#logo {
+    	margin-left: 20px;
+	}
+
+	#logo > a {
+		display: inline-block; 
+	}
+
+	#logo > a > img {
+		width: 70px;
+		height: auto;
+		transition: filter 0.3s ease-in-out; 
+	}
+
+	#logo > a > img:hover {
+		filter: brightness(70%);
+		cursor: pointer;
+	}
+
+
+		#container, #mission, #hangouts, #team {
+			padding: 70px;
+		}
+
+		#team {
+			text-align: center;
+		}
+
+		#footer {
+			background-color: #777;
+			color: #FFF;
+			text-align: center;
+			height: 50px;
+			line-height: 50px;
+			font-size: 0.8em;
+		}
+
+		.img-container {
+			background-color: #999;
+			width: 180px;
+			height: 180px;
+			margin: 10px;
+			overflow: hidden;
+
+			position: relative;
+		}
+
+		.img-container > img {
+			width: auto;
+			height: 100%;
+		}
+
+		.img-container > .width-100 {
+			width: 100%;
+			height: auto;
+		}
+
+		.overlay {
+			color: #FFF;
+			background-color: rgba(0, 0, 0, 0.6);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			padding-top: 80px;
+			visibility: hidden;
+			opacity: 0; 
+			transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
+		}
+
+		.img-container:hover .overlay {
+			visibility: visible;
+			opacity: 1;
+		}
+
+
+		/* Tablets - Screen sizes <= 991px */
+		/* @media (max-width: 991px) {
+			#nav, #container, #left, #right {
+				width: auto; 
+				border: none;
+			}
+			#container {
+				flex-direction: column;
+			}
+			.thumbnail {
+				width: 23%;
+				margin: 1%;
+			}
+		} */
+
+		/* Mobile - Screen sizes <= 767 */
+		/* @media (max-width: 767px) {
+			body {
+				background-color: yellow;
+				padding: 0px;
+			}
+			#navbar {
+				position: static;
+			}
+			#nav ul {
+				flex-direction: column;
+			}
+			#nav li {
+				width: auto;
+			}
+			#thumbnails {
+				flex-direction: column;
+			}
+			.thumbnail {
+				width: 50%;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.thumbnail img {
+				width: 100%;
+				height: auto;
+			}
+		} */
+	</style>
+
+</head>
+
+<body>
+
+	<div id="navbar">
+		<div id="logo">
+			<a href="home.html">
+				<img src="assets/logo_circle_white.png" alt="Logo">
+			</a>
+		</div>
+		
+
+		<div id="nav">
+			<ul>
+				<li><a href="about_new.html">About</a></li>
+				<li><a href="membership.html">Membership</a></li>
+				<li><a href="">Projects</a></li>
+			</ul>
+
+		</div> <!-- #nav -->
+
+	</div> <!-- #navbar -->
+
+  <div id="container">
+    <div id="middle">
+      <h1>Who We Are</h1>
+    </div> <!-- #middle -->
+  </div>
+  
+<div id="container">
+  <div id="left">
+		<h2>Our Story</h2>
+		<p>Creative Labs SC is the second branch of the CL community, following along Creative Labs UCLA, who are the original creators. Specifically within USC, we found gaps and limitations in the creative community: there weren't a lot of opportunities for student-creatives to explore and express their creativity, both physical and technical.</p>
+		<p>We hope our organization serves as an escape from harsh deadlines and restrictions that come with academia and extracurriculars to see what creativity lies in you. Whether you're a seasoned artist or burgeoning creative, we invite you to explore your unique creative voice and vision.</p>
+	</div>
+	<div id="right">
+		<img src="assets/Untitled_Artwork.png" alt="Otter" style="width:100%; max-width:300px; display:block; margin:auto;">
+	</div>
+</div>
+  
+<div id="container">
+  <div id="left">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Otter" style="width:100%; max-width:300px; display:block; margin:auto;">
+	</div>
+  <div id="right">
+		<h2>Our Mission</h2>
+		<p>Creative Labs SC's mission is to cultivate information and passion in the form of modern art and technology within an expansive creator ecosystem.</p>
+	</div>
+</div>
+  
+<div id="container">
+  <div id="left">
+		<h2>Our Initiatives</h2>
+		<p>Creative Labs SC is a community of student creatives working on cool projects. We are a community of passionate creatives using modern art and technology to produce meaningful work. We welcome students from all disciplines and backgrounds to work together on technical and creative projects.</p>
+		<p>At the start of each semester, members collaborate and bounce ideas off of each other, choosing or proposing projects to pursue throughout the term. These projects are pursued throughout the semester, culminating in a final exhibition where members showcase what they have created.</p>
+    <p>Beyond projects, CL hosts a plethora of events throughout the semester to foster a stronger community among members, ranging from creative workshops to retreats.</p>
+    
+	</div>
+	<div id="right">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Otter" style="width:100%; max-width:300px; display:block; margin:auto;">
+	</div>
+</div>
+
+
+
+	<div id="team">
+		<h2>Our Team</h2>
+
+		<p>Meet the Fall 2024 Executive Board.</p>
+
+		<div id="thumbnails">
+
+			<div class="img-container">
+				<img src="assets/olivia.PNG" alt="Olivia Dien">
+				<div class="overlay">Olivia Dien Co-President</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="assets/kathy.jpg" alt="Kathy Lin">
+				<div class="overlay">Kathy Lin - Co- President</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="assets/esther.PNG" alt="Esther Kim">
+				<div class="overlay">Esther Kim - Vice President</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="assets/jordan.PNG" alt="Jordan Tran">
+				<div class="overlay">Jordan Tran - Droject Director</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="assets/sy.PNG" alt="SooYoung Kim">
+				<div class="overlay">SooYoung Kim - Recruitment Director</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="assets/kf.PNG" alt="Kelani Fong">
+				<div class="overlay">Kelani Fong - Technology Director</div>
+			</div> <!-- .img-container -->
+      
+      <div class="img-container">
+				<img src="assets/mandie.PNG" alt="Mandie Le">
+				<div class="overlay">Mandie Le - Finance Director</div>
+			</div> <!-- .img-container -->
+      
+      <div class="img-container">
+				<img src="assets/tammi.PNG" alt="Tammi Sison">
+				<div class="overlay">Tammi Sison - Creative Director</div>
+			</div> <!-- .img-container -->
+
+      <div class="img-container">
+				<img src="assets/sam.PNG" alt="Samuel Wu">
+				<div class="overlay">Samuel Wu - Co-Internal Events Director</div>
+			</div> <!-- .img-container -->
+      
+      <div class="img-container">
+				<img src="assets/avery.PNG" alt="Avery Liu">
+				<div class="overlay">Avery Liu - Co-Internal Events Director</div>
+			</div> <!-- .img-container -->
+      
+      <div class="img-container">
+				<img src="assets/jenny.PNG" alt="Jenny Kim">
+				<div class="overlay">Jenny Kim - Co-External Events Director</div>
+			</div> <!-- .img-container -->
+      
+      <div class="img-container">
+				<img src="assets/livia.PNG" alt="Livia Tseng">
+				<div class="overlay">Livia Tseng - Co-External Events Director</div>
+			</div> <!-- .img-container -->
+      
+      <div class="img-container">
+				<img src="assets/evan.PNG" alt="Evan Lu">
+				<div class="overlay">Evan Lu - Marketing/Communications Director</div>
+			</div> <!-- .img-container -->
+      
+      <div class="img-container">
+				<img src="assets/ameen.png" alt="Ameen Qureshi">
+				<div class="overlay">Ameen Qureshi - Senior Advisor</div>
+			</div> <!-- .img-container -->
+      
+		</div>
+
+	</div>
+
+	<div id="footer">
+		Creative Labs USC &copy; 2024
+	</div> <!-- #footer -->
+
+</body>
+
+</html>
