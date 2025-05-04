@@ -12,9 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
   
   <style>
+    html, body{
+      overflow-x: hidden; 
+      max-width: 100%; 
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-size: 20px;
+      font-family: 'NewYorker', sans-serif;
       background-image: url('assets/background.jpg');
       background-size: cover;
       background-repeat: no-repeat;
@@ -22,12 +27,33 @@
       background-position: center;
       color: #1c1c1c;
     }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .social-links a img {
+    width: 50px;
+    height: 50px;
+    background-color: #e8d4ff;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+
+  .social-links a img:hover {
+    transform: scale(1.1);
+  }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 10px 100px;
     }
 
     .logo-circle {
@@ -59,6 +85,8 @@
     .main {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
       padding: 3rem 2rem;
       flex-wrap: wrap;
     }
@@ -71,7 +99,7 @@
     }
 
     .text-logo {
-      background-color: #e8d4ff;
+      background-color: transparent;
       padding: 1.5rem 3rem;
       border-radius: 15px;
       font-size: 1.5rem;
@@ -88,7 +116,7 @@
     .social-circle a {
       width: 40px;
       height: 40px;
-      background-color: #e8d4ff;
+      background-color: transparent;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -99,6 +127,7 @@
       text-decoration: none;
       color: #000;
       font-weight: bold;
+      padding-top: 100px;
     }
 
     .right-section {
@@ -114,6 +143,8 @@
       height: 300px;
       color: #000;
       margin-bottom: 16rem;
+      padding-left: 300px;
+      box-sizing: border-box; 
     }
 
     .section-2 {
@@ -148,14 +179,39 @@
       text-align: center;
     }
 
+    .social-links {
+  display: flex;
+  justify-content: center;    
+  align-items: center;
+  gap: 1.2rem;                 
+  margin-top: 2rem;
+  }
+
+   .social-links a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  background-color: transparent;
+  }
+
+.social-links a img:hover {
+  transform: scale(1.1); /* subtle hover effect */
+}
+
+
     .learn-more {
       background-color: #e8d4ff;
-      padding: 0.5rem 1rem;
+      padding: 1rem 1rem;
       border: none;
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
       color: #1c1c1c;
+      margin-top: 20px;
     }
 
     .photo-box {
@@ -186,6 +242,18 @@
     .section-2 {
         margin-top: 60px;
       }
+    
+
+    @font-face {
+      font-family: 'NewYorker';
+      src: url('fonts/NewYorker-6Y46.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'LibreBaskervilleBold';
+      src: url('fonts/LibreBaskervilleBold-A606.ttf') format('truetype');
+    }
+
   </style>
 </head>
 <body>
@@ -207,29 +275,24 @@
 
   <div class="main">
     <div class="left-section">
-      <div class="text-logo">CL TEXT LOGO</div>
-      <div class="social-links">
-
-        <div style="width: 40px; height: 40px; background-color: #e8d4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <a href="https://www.instagram.com/creativelabsusc/" target="_blank">
-            <img src="assets/insta.PNG" alt="Instagram" style="width: 24px; height: 24px;">
-          </a>
-        </div>
-        <div style="width: 40px; height: 40px; background-color: #e8d4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <a href="https://www.linkedin.com/company/creative-labs-sc/" target="_blank">
-            <img src="assets/linkedin.png" alt="Linkedin" style="width: 24px; height: 24px;">
-          </a>
-        </div>
-        <div style="width: 40px; height: 40px; background-color: #e8d4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-          <a href="https://www.linkedin.com/company/creative-labs-sc/" target="_blank">
-            <img src="assets/medium.png" alt="Medium" style="width: 24px; height: 24px;">
-          </a>
-        </div>
+      <div class="text-logo" style="background-color: transparent; padding-bottom: 50px;">
+        <img src="assets/Banner Transparent.png" alt="Creative Lab Photo" style="width: 100%; height: auto;">
       </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/creativelabsusc/" target="_blank">
+          <img src="assets/insta.PNG" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/company/creative-labs-sc/" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.linkedin.com/company/creative-labs-sc/" target="_blank">
+          <img src="assets/medium.png" alt="Medium">
+        </a>
+      </div>      
     </div>
 
-    <div class="right-section" style="margin-top: 100px;padding: 0; background-color: transparent;">
-      <img src="assets/eboard.jpg" alt="Creative Lab Photo" style="width: 100%; height: auto; border-radius: 15px;">
+    <div class="right-section" style="margin-top: 100px; padding: 0; background-color: transparent; align-self: flex-end; margin-left: auto; margin-right: 100px;">
+      <img src="assets/eboard.jpg" alt="Creative Lab Photo" style="width: 125%; max-width: 400%; height: auto; border-radius: 15px;">
     </div>
     
   </div>
@@ -247,8 +310,8 @@
         <button class="learn-more">Learn more</button>
       </a>
     </div>
-    <div class="photo-box" style="margin-left: 900px;">
-      photo 
+    <div class="photo-box" style="margin-left: 900px; background-color: transparent;">
+      <img src="assets/CL Ollie.png" alt="Creative Lab Photo" style="width: 100%; height: auto; border-radius:15px;"
     </div>
     </div>
   </div>
